@@ -7,8 +7,8 @@ const { execFile } = require('child_process');
 
 const BASE_DOWNLOAD_PATH = path.resolve('./twitter_artist_images');
 
-const DEFAULT_NUM_SCROLLS = 100; // User's preferred default
-const DEFAULT_MAX_IMAGES = 500;
+const DEFAULT_NUM_SCROLLS = 10; // User's preferred default
+const DEFAULT_MAX_IMAGES = 50;
 const DEFAULT_INCLUDE_VIDEOS = true; 
 
 const SCROLL_DELAY_BASE = 50; 
@@ -35,7 +35,7 @@ const MIN_SCROLLS_BEFORE_NO_NEW_MEDIA_BREAK = 8; // MODIFIED: Increased
 
 const MANUAL_INSPECTION_DELAY = 0; 
 const DOWNLOAD_CONCURRENCY = 10; 
-const USER_PROCESSING_CONCURRENCY = 2;
+const USER_PROCESSING_CONCURRENCY = 1;
 
 async function randomDelay(base, variance) {
     const ms = base + Math.floor(Math.random() * variance);
